@@ -13,5 +13,11 @@ export default function Notes() {
 
   if (loading) return <div>Loading...</div>
 
-  return <ul>{data.map((el) => <li key={el.id}>{el.title}</li>) || []}</ul>
+  return (
+    <ul>
+      {data.map((el: { id: string; title: string }) => (
+        <li key={el.id}>{el.title}</li>
+      )) || []}
+    </ul>
+  )
 }

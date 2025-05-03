@@ -33,7 +33,7 @@ export default async function Page() {
               marginBottom: '10px',
             }}
           >
-            {note.title}
+            <a href={`/notes/isr/${note.id}`}>{note.title}</a>
           </li>
         ))}
       </ul>
