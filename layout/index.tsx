@@ -2,14 +2,16 @@
 
 // import styles from '@/styles/Home.module.css'
 import Link from 'next/link'
-import { useCount } from '@/context'
+// import { useCount } from '@/context'
+import { dataStore } from '@/store/dataStore'
 
 export default function MainLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
-  const { count, setCount } = useCount()
+  // const { count, setCount } = useCount()
+  const { count } = dataStore()
   return (
     <>
       <div className="flex flex-col min-h-screen">
